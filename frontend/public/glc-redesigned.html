@@ -297,23 +297,64 @@
 
 <!-- ============ CONTACT / FOOTER ============ -->
 <section id="contact" class="relative bg-sand-50 py-24 md:py-32" aria-label="Get in touch">
-  <div class="max-w-6xl mx-auto px-6 md:px-10 lg:px-14">
-    <div class="grid lg:grid-cols-12 gap-10 items-center">
-      <div class="lg:col-span-7">
-        <p class="eyebrow mb-5"><span class="rule"></span>Start the conversation</p>
-        <h3 class="display text-[2.2rem] sm:text-[2.8rem] md:text-[3.4rem] text-forest-900">
-          Give a young entrepreneur<br/><em class="italic font-normal text-forest-700">a chance.</em>
-        </h3>
-        <p class="mt-6 text-slate2-700 leading-[1.8] max-w-xl">
-          Text or call — that's it. No forms, no portals, no runaround. I'll get back to you the same day with honest answers about timing and pricing.
-        </p>
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-14">
+    <div class="max-w-3xl">
+      <p class="eyebrow mb-5"><span class="rule"></span>Start the conversation</p>
+      <h3 class="display text-[2.2rem] sm:text-[2.8rem] md:text-[3.4rem] text-forest-900">
+        Give a young entrepreneur<br/><em class="italic font-normal text-forest-700">a chance.</em>
+      </h3>
+      <p class="mt-6 text-slate2-700 leading-[1.8] max-w-xl">
+        Text or call — that's it. No forms, no portals, no runaround. I'll get back to you the same day with honest answers about timing and pricing.
+      </p>
+    </div>
+
+    <div class="mt-14 grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+      <!-- Service-area map -->
+      <div class="lg:col-span-7 reveal">
+        <div class="relative h-full min-h-[360px] md:min-h-[440px] rounded-md overflow-hidden border border-forest-100 shadow-card" data-testid="service-area-map">
+          <iframe
+            title="GLC service area — Central Park, Commerce City, Colorado"
+            src="https://www.google.com/maps?q=Central+Park,+Commerce+City,+CO&t=&z=13&ie=UTF8&iwloc=B&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="absolute inset-0 w-full h-full"
+            style="border:0; filter: saturate(.85) contrast(1.02);"
+            aria-label="Map of GLC service area in Central Park, Commerce City"></iframe>
+          <div class="pointer-events-none absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
+            <div class="pointer-events-auto bg-sand-50/95 backdrop-blur border border-forest-100 rounded-md px-4 py-3 shadow-soft">
+              <p class="text-[0.65rem] tracking-[0.22em] uppercase text-forest-700">Service area</p>
+              <p class="serif text-lg text-forest-900 leading-tight mt-0.5">Central Park · Commerce City, CO</p>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Central+Park%2C+Commerce+City%2C+CO"
+               target="_blank" rel="noopener noreferrer"
+               class="pointer-events-auto inline-flex items-center gap-2 bg-forest-700 text-sand-50 text-xs font-semibold tracking-wide px-4 py-2.5 rounded-full hover:bg-forest-900 transition-colors"
+               data-testid="map-open-link">
+              Open in Maps
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="lg:col-span-5">
-        <div class="rounded-md bg-white border border-forest-100 shadow-card p-8 md:p-9">
+
+      <!-- Contact card -->
+      <div class="lg:col-span-5 reveal">
+        <div class="rounded-md bg-white border border-forest-100 shadow-card p-8 md:p-9 h-full flex flex-col">
           <p class="text-[0.7rem] tracking-[0.22em] uppercase text-forest-700">Matt Robbins · Owner</p>
           <a href="tel:720-434-0934" class="serif block text-3xl md:text-4xl text-forest-900 mt-3 hover:text-forest-700 transition-colors" data-testid="contact-phone">(720) 434-0934</a>
-          <a href="mailto:matthew39580@gmail.com" class="block mt-3 text-slate2-700 hover:text-forest-800 transition-colors" data-testid="contact-email">matthew39580@gmail.com</a>
-          <div class="mt-7 pt-6 border-t border-forest-100">
+          <a href="mailto:matthew39580@gmail.com" class="block mt-3 text-slate2-700 hover:text-forest-800 transition-colors break-all" data-testid="contact-email">matthew39580@gmail.com</a>
+
+          <dl class="mt-6 pt-6 border-t border-forest-100 grid grid-cols-2 gap-4">
+            <div>
+              <dt class="text-[0.62rem] tracking-[0.22em] uppercase text-slate2-600">Response</dt>
+              <dd class="serif text-lg text-forest-900 mt-1">Same day</dd>
+            </div>
+            <div>
+              <dt class="text-[0.62rem] tracking-[0.22em] uppercase text-slate2-600">Service area</dt>
+              <dd class="serif text-lg text-forest-900 mt-1">Central Park</dd>
+            </div>
+          </dl>
+
+          <div class="mt-auto pt-7">
             <a href="tel:720-434-0934" class="btn-primary w-full justify-center" data-testid="contact-cta">
               Text or call me
               <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>

@@ -226,21 +226,54 @@ export default function GLCSite() {
 
       {/* CONTACT */}
       <section id="contact" className="relative bg-[#faf7f1] py-24 md:py-32" aria-label="Get in touch">
-        <div className="max-w-6xl mx-auto px-6 md:px-10 lg:px-14">
-          <div className="grid lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-7">
-              <Eyebrow>Start the conversation</Eyebrow>
-              <h3 className="glc-display mt-5 text-[2.2rem] sm:text-[2.8rem] md:text-[3.4rem] text-[#13231a]" data-testid="contact-heading">
-                Give a young entrepreneur
-                <br />
-                <em className="italic font-normal text-[#244229]">a chance.</em>
-              </h3>
-              <p className="mt-6 text-[#2b3033] leading-[1.8] max-w-xl">
-                {`Text or call — that's it. No forms, no portals, no runaround. I'll get back to you the same day with honest answers about timing and pricing.`}
-              </p>
+        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-14">
+          <div className="max-w-3xl">
+            <Eyebrow>Start the conversation</Eyebrow>
+            <h3 className="glc-display mt-5 text-[2.2rem] sm:text-[2.8rem] md:text-[3.4rem] text-[#13231a]" data-testid="contact-heading">
+              Give a young entrepreneur
+              <br />
+              <em className="italic font-normal text-[#244229]">a chance.</em>
+            </h3>
+            <p className="mt-6 text-[#2b3033] leading-[1.8] max-w-xl">
+              {`Text or call — that's it. No forms, no portals, no runaround. I'll get back to you the same day with honest answers about timing and pricing.`}
+            </p>
+          </div>
+
+          <div className="mt-14 grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+            {/* Service-area map */}
+            <div className="lg:col-span-7 glc-reveal">
+              <div className="relative h-full min-h-[360px] md:min-h-[440px] rounded-md overflow-hidden border border-[#dde8de] glc-shadow-card" data-testid="service-area-map">
+                <iframe
+                  title="GLC service area — Central Park, Commerce City, Colorado"
+                  src="https://www.google.com/maps?q=Central+Park,+Commerce+City,+CO&t=&z=13&ie=UTF8&iwloc=B&output=embed"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0 w-full h-full"
+                  style={{ border: 0, filter: "saturate(0.85) contrast(1.02)" }}
+                  aria-label="Map of GLC service area in Central Park, Commerce City"
+                />
+                <div className="pointer-events-none absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
+                  <div className="pointer-events-auto bg-[#faf7f1]/95 backdrop-blur border border-[#dde8de] rounded-md px-4 py-3 glc-shadow-soft">
+                    <p className="text-[0.65rem] tracking-[0.22em] uppercase text-[#244229]">Service area</p>
+                    <p className="glc-serif text-lg text-[#13231a] leading-tight mt-0.5">Central Park · Commerce City, CO</p>
+                  </div>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Central+Park%2C+Commerce+City%2C+CO"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pointer-events-auto inline-flex items-center gap-2 bg-[#244229] text-[#faf7f1] text-xs font-semibold tracking-wide px-4 py-2.5 rounded-full hover:bg-[#13231a] transition-colors"
+                    data-testid="map-open-link"
+                  >
+                    Open in Maps
+                    <ArrowRight size={14} aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className="lg:col-span-5">
-              <div className="rounded-md bg-white border border-[#dde8de] glc-shadow-card p-8 md:p-9">
+
+            {/* Contact card */}
+            <div className="lg:col-span-5 glc-reveal">
+              <div className="rounded-md bg-white border border-[#dde8de] glc-shadow-card p-8 md:p-9 h-full flex flex-col">
                 <p className="text-[0.7rem] tracking-[0.22em] uppercase text-[#244229]">Matt Robbins · Owner</p>
                 <a
                   href="tel:720-434-0934"
@@ -251,12 +284,24 @@ export default function GLCSite() {
                 </a>
                 <a
                   href="mailto:matthew39580@gmail.com"
-                  className="block mt-3 text-[#2b3033] hover:text-[#1c3320] transition-colors"
+                  className="block mt-3 text-[#2b3033] hover:text-[#1c3320] transition-colors break-all"
                   data-testid="contact-email"
                 >
                   matthew39580@gmail.com
                 </a>
-                <div className="mt-7 pt-6 border-t border-[#dde8de]">
+
+                <dl className="mt-6 pt-6 border-t border-[#dde8de] grid grid-cols-2 gap-4">
+                  <div>
+                    <dt className="text-[0.62rem] tracking-[0.22em] uppercase text-[#3a4044]">Response</dt>
+                    <dd className="glc-serif text-lg text-[#13231a] mt-1">Same day</dd>
+                  </div>
+                  <div>
+                    <dt className="text-[0.62rem] tracking-[0.22em] uppercase text-[#3a4044]">Service area</dt>
+                    <dd className="glc-serif text-lg text-[#13231a] mt-1">Central Park</dd>
+                  </div>
+                </dl>
+
+                <div className="mt-auto pt-7">
                   <a href="tel:720-434-0934" className="glc-btn-primary w-full justify-center" data-testid="contact-cta">
                     Text or call me
                     <ArrowRight className="glc-arrow" size={18} aria-hidden="true" />
