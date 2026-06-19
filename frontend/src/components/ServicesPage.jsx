@@ -10,22 +10,29 @@ const TIERS = [
     subtitle: "Residential Mows Usually",
     services: [
       {
-        name: "Front Yard Mow",
-        price: "$15",
+        name: "Complete Package",
+        price: "$40",
         description:
-          "A focused mow of the front side of your residence — the part neighbors see every day.",
+          "The full treatment: front and back yard mow, plus edging and trimming on both — done in a single visit.",
+        featured: true,
       },
       {
-        name: "Edging & Trimming / Weeding",
-        price: "$15",
-        description:
-          "Edging & Weeding: a focused edging job on the finicky parts of your lawn. Weeding: a by-hand pull of those unwanted weeds.",
-      },
-      {
-        name: "Back Yard Mow",
+        name: "Front or Back Yard Mow",
         price: "$20",
         description:
-          "A focused mow of the back side of your residence — your private retreat, cared for the same way.",
+          "A focused mow of just the front, or just the back, of your residence — whichever side needs the attention.",
+      },
+      {
+        name: "Edging & Trimming",
+        price: "$10",
+        description:
+          "A focused edging job on the finicky parts of your lawn — clean borders along walkways, beds, and fences.",
+      },
+      {
+        name: "Weeding",
+        price: "Depends on scale",
+        description:
+          "A rigorous, by-hand pulling of unruly and invasive weeds — leaving your lawn clean and the soil undisturbed.",
       },
     ],
   },
@@ -37,7 +44,7 @@ const TIERS = [
     services: [
       {
         name: "Lawn Mow",
-        price: "$40",
+        price: "$60",
         description:
           "A focused mow of your lawn, either front or back, outside your place of business or your residence.",
       },
@@ -49,7 +56,7 @@ const TIERS = [
       },
       {
         name: "Edging",
-        price: "$20",
+        price: "$30",
         description:
           "A complete finish of the edges of your lawn. Perfect for targeting the edges of your lawn.",
       },
@@ -124,9 +131,18 @@ export default function ServicesPage() {
                 {tier.services.map((svc) => (
                   <article
                     key={svc.name}
-                    className="glc-reveal group rounded-md border border-[#dde8de] bg-white/85 backdrop-blur-sm glc-shadow-soft px-7 md:px-9 py-7 md:py-8 transition-all hover:-translate-y-1 hover:glc-shadow-card"
+                    className={`glc-reveal group rounded-md border bg-white/85 backdrop-blur-sm glc-shadow-soft px-7 md:px-9 py-7 md:py-8 transition-all hover:-translate-y-1 hover:glc-shadow-card ${
+                      svc.featured
+                        ? "border-[#244229]/40 ring-1 ring-[#244229]/15 relative"
+                        : "border-[#dde8de]"
+                    }`}
                     data-testid={`service-${svc.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
                   >
+                    {svc.featured && (
+                      <span className="absolute -top-3 left-7 inline-flex items-center gap-1.5 bg-[#244229] text-[#faf7f1] text-[0.62rem] tracking-[0.22em] uppercase font-semibold px-3 py-1 rounded-full shadow-sm">
+                        Best value
+                      </span>
+                    )}
                     <div className="flex flex-wrap items-baseline justify-between gap-4">
                       <h3 className="glc-serif text-2xl md:text-[1.75rem] text-[#13231a]">{svc.name}</h3>
                       <span className="glc-serif text-3xl md:text-4xl text-[#244229]">
