@@ -2,9 +2,11 @@ import { useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 
 const PORTRAIT_IMG =
-  "https://static.wixstatic.com/media/1ff751_a665874d5f694927a6cc5c0a15f62598~mv2.jpeg/v1/fill/w_1100,h_1380,al_c,q_85,enc_auto/1ff751_a665874d5f694927a6cc5c0a15f62598~mv2.jpeg";
-const LAWN_IMG =
   "https://static.wixstatic.com/media/1ff751_2602975707fe48abb5a928f8e964628e~mv2.jpeg/v1/fill/w_1100,h_1400,al_c,q_85,enc_auto/1ff751_2602975707fe48abb5a928f8e964628e~mv2.jpeg";
+const LAWN_IMG =
+  "https://static.wixstatic.com/media/1ff751_a665874d5f694927a6cc5c0a15f62598~mv2.jpeg/v1/fill/w_1100,h_1380,al_c,q_85,enc_auto/1ff751_a665874d5f694927a6cc5c0a15f62598~mv2.jpeg";
+const LOGO_IMG =
+  "https://customer-assets.emergentagent.com/job_glc-premium-redesign/artifacts/fmsli88s_High-quality%20updated%20logo.png";
 
 const Eyebrow = ({ children, light = false }) => (
   <p
@@ -45,8 +47,8 @@ export default function GLCSite() {
       <header className="absolute top-0 left-0 right-0 z-40">
         <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-14 py-7 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3 group" data-testid="nav-logo">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#244229] text-[#faf7f1] glc-serif text-xl">
-              G
+            <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white border border-[#dde8de] overflow-hidden shadow-sm">
+              <img src={LOGO_IMG} alt="GLC Great Lawn Cuts logo" className="h-10 w-10 object-contain" />
             </span>
             <span className="flex flex-col leading-tight">
               <span className="glc-serif text-xl text-[#1c3320]">GLC</span>
@@ -283,11 +285,11 @@ export default function GLCSite() {
                   (720) 434-0934
                 </a>
                 <a
-                  href="mailto:matthew39580@gmail.com"
+                  href="mailto:glcgreatlawncuts@gmail.com"
                   className="block mt-3 text-[#2b3033] hover:text-[#1c3320] transition-colors break-all"
                   data-testid="contact-email"
                 >
-                  matthew39580@gmail.com
+                  glcgreatlawncuts@gmail.com
                 </a>
 
                 <dl className="mt-6 pt-6 border-t border-[#dde8de] grid grid-cols-2 gap-4">
@@ -317,8 +319,8 @@ export default function GLCSite() {
       <footer className="bg-[#13231a] text-[#f3ecdc]/85 py-12">
         <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#faf7f1]/10 glc-serif text-lg text-[#faf7f1]">
-              G
+            <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/95 overflow-hidden">
+              <img src={LOGO_IMG} alt="GLC Great Lawn Cuts logo" className="h-9 w-9 object-contain" />
             </span>
             <div className="leading-tight">
               <p className="glc-serif text-lg text-[#faf7f1]">GLC Great Lawn Cuts</p>
@@ -334,7 +336,7 @@ export default function GLCSite() {
             <a href="tel:720-434-0934" className="glc-footer-link text-sm" data-testid="footer-phone">
               (720) 434-0934
             </a>
-            <a href="mailto:matthew39580@gmail.com" className="glc-footer-link text-sm" data-testid="footer-email">
+            <a href="mailto:glcgreatlawncuts@gmail.com" className="glc-footer-link text-sm" data-testid="footer-email">
               Email
             </a>
           </div>
