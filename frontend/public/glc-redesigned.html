@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="GLC Great Lawn Cuts — Reliable, affordable, stress-free lawn mowing in Central Park, Commerce City. A transparency-first local business by Matt Robbins." />
+<title>GLC Great Lawn Cuts — Reliable Lawn Care, Honestly Done</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+          sans: ['Manrope', 'system-ui', 'sans-serif'],
+        },
+        colors: {
+          forest:  { 50:'#f1f6f1', 100:'#dde8de', 200:'#b9d0bb', 300:'#8eb191', 400:'#5e8c63', 500:'#3f6e45', 600:'#2f5535', 700:'#244229', 800:'#1c3320', 900:'#13231a' },
+          sand:    { 50:'#faf7f1', 100:'#f3ecdc', 200:'#e6d8b9', 300:'#d6bf8e', 400:'#c4a26a', 500:'#b08850', 600:'#947044', 700:'#765939', 800:'#5d4730', 900:'#3e2f20' },
+          slate2:  { 600:'#3a4044', 700:'#2b3033', 800:'#1d2124', 900:'#121518' },
+        },
+        boxShadow: {
+          soft: '0 10px 40px -12px rgba(20, 35, 25, 0.18)',
+          card: '0 24px 60px -28px rgba(20, 35, 25, 0.35)',
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  :root{
+    --bg: #faf7f1;
+    --ink: #1d2124;
+    --ink-soft: #4a5258;
+    --line: rgba(28,51,32,0.10);
+    --forest: #244229;
+    --forest-deep: #13231a;
+    --gold: #b08850;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Manrope', system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .serif { font-family: 'Cormorant Garamond', Georgia, serif; letter-spacing: -0.01em; }
+  .display { font-family: 'Cormorant Garamond', Georgia, serif; letter-spacing: -0.02em; line-height: 1.02; font-weight: 500; }
+  .eyebrow {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .rule { display:inline-block; width:42px; height:1px; background: currentColor; vertical-align: middle; margin-right: .75rem; opacity:.55; }
+
+  /* Subtle paper grain for premium feel */
+  .grain::before {
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:.04; mix-blend-mode:multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.6'/></svg>");
+  }
+
+  /* Premium button */
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: .75rem;
+    background: var(--forest); color: #faf7f1;
+    padding: 1rem 1.75rem; border-radius: 999px;
+    font-weight: 600; font-size: 0.95rem; letter-spacing: 0.01em;
+    box-shadow: 0 14px 32px -16px rgba(19,35,26,0.55);
+    transition: transform .35s cubic-bezier(.2,.8,.2,1), background-color .25s ease, box-shadow .35s ease;
+    will-change: transform;
+  }
+  .btn-primary:hover { background: var(--forest-deep); transform: translateY(-2px); box-shadow: 0 22px 48px -18px rgba(19,35,26,0.6); }
+  .btn-primary .arrow { transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+  .btn-primary:hover .arrow { transform: translateX(4px); }
+  .btn-ghost {
+    display:inline-flex; align-items:center; gap:.6rem;
+    color: var(--forest-deep); font-weight:600; font-size:.92rem;
+    border-bottom: 1px solid rgba(36,66,41,.35);
+    padding-bottom: 2px; transition: border-color .25s ease, color .25s ease;
+  }
+  .btn-ghost:hover { border-color: var(--forest-deep); color: #000; }
+
+  /* Reveal-on-scroll */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* Hero image frame */
+  .frame {
+    position: relative; border-radius: 8px; overflow: hidden;
+    box-shadow: 0 30px 80px -32px rgba(19,35,26,.45), 0 8px 24px -16px rgba(19,35,26,.3);
+  }
+  .frame img { width:100%; height:100%; object-fit: cover; display:block; transition: transform 1.4s cubic-bezier(.2,.8,.2,1); }
+  .frame:hover img { transform: scale(1.03); }
+
+  /* Decorative number */
+  .numeral { font-family: 'Cormorant Garamond', serif; color: rgba(36,66,41,.14); font-weight: 500; line-height: 1; }
+
+  /* Header */
+  .nav-link { color: var(--ink-soft); font-weight: 500; font-size: .92rem; transition: color .2s ease; }
+  .nav-link:hover { color: var(--forest-deep); }
+
+  /* Footer */
+  .footer-link { color: rgba(250,247,241,.78); transition: color .2s ease; }
+  .footer-link:hover { color: #fff; }
+
+  /* Accessibility — focus rings */
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Hero decorative leaf */
+  .leaf {
+    position:absolute; pointer-events:none; opacity:.08; color: var(--forest-deep);
+  }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ============ NAV ============ -->
+<header class="absolute top-0 left-0 right-0 z-40">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-14 py-7 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3 group" data-testid="nav-logo">
+      <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-forest-700 text-sand-50 serif text-xl">G</span>
+      <span class="flex flex-col leading-tight">
+        <span class="serif text-xl text-forest-800">GLC</span>
+        <span class="text-[0.65rem] tracking-[0.25em] uppercase text-slate2-600">Great Lawn Cuts</span>
+      </span>
+    </a>
+    <nav class="hidden md:flex items-center gap-10" aria-label="Primary">
+      <a href="#story" class="nav-link" data-testid="nav-story">The Story</a>
+      <a href="#philosophy" class="nav-link" data-testid="nav-philosophy">Philosophy</a>
+      <a href="#contact" class="nav-link" data-testid="nav-contact">Contact</a>
+    </nav>
+    <a href="tel:720-434-0934" class="hidden md:inline-flex btn-ghost" data-testid="nav-cta">
+      (720) 434-0934
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="relative overflow-hidden grain" aria-label="Hero">
+  <div class="absolute inset-0 -z-10" aria-hidden="true">
+    <div class="absolute inset-0 bg-gradient-to-b from-sand-50 via-sand-50 to-sand-100"></div>
+    <div class="absolute -top-32 -right-32 h-[520px] w-[520px] rounded-full bg-forest-100/60 blur-3xl"></div>
+    <div class="absolute top-1/3 -left-24 h-[380px] w-[380px] rounded-full bg-sand-200/70 blur-3xl"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-14 pt-40 md:pt-44 pb-24 md:pb-32 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <div class="lg:col-span-7 reveal">
+      <p class="eyebrow mb-6"><span class="rule"></span>Central Park · Commerce City</p>
+      <h1 class="display text-[2.6rem] sm:text-[3.4rem] md:text-[4.2rem] lg:text-[5rem] text-forest-900">
+        I mow lawns, <em class="italic font-normal text-forest-700">reliably,</em><br/>
+        affordably, stress-free.
+      </h1>
+      <p class="mt-8 max-w-xl text-[1.05rem] md:text-[1.12rem] leading-[1.75] text-slate2-700">
+        GLC is a one-person lawn mowing operation run out of Central Park, Commerce City. I started it because I wanted to learn what it actually takes to run a business — and because I think this neighborhood deserves someone local, affordable, and honest. My goal is simple: affordable and reliable lawn care, friendly and responsive customer service, and constant improvement through genuine customer feedback.
+      </p>
+      <div class="mt-10 flex flex-wrap items-center gap-6">
+        <a href="tel:720-434-0934" class="btn-primary" aria-label="Text or call Matt at (720) 434-0934" data-testid="hero-cta-call">
+          Text or call me: (720) 434-0934
+          <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#story" class="btn-ghost" data-testid="hero-cta-story">Read my story</a>
+      </div>
+
+      <dl class="mt-14 grid grid-cols-3 gap-6 max-w-lg">
+        <div>
+          <dt class="text-[0.7rem] tracking-[0.18em] uppercase text-slate2-600">Local</dt>
+          <dd class="serif text-2xl md:text-3xl text-forest-800 mt-1">Commerce City</dd>
+        </div>
+        <div>
+          <dt class="text-[0.7rem] tracking-[0.18em] uppercase text-slate2-600">Honest</dt>
+          <dd class="serif text-2xl md:text-3xl text-forest-800 mt-1">Fair pricing</dd>
+        </div>
+        <div>
+          <dt class="text-[0.7rem] tracking-[0.18em] uppercase text-slate2-600">Reliable</dt>
+          <dd class="serif text-2xl md:text-3xl text-forest-800 mt-1">On schedule</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="lg:col-span-5 reveal">
+      <div class="relative">
+        <div class="frame aspect-[4/5]">
+          <img src="https://static.wixstatic.com/media/1ff751_2602975707fe48abb5a928f8e964628e~mv2.jpeg/v1/fill/w_1100,h_1400,al_c,q_85,enc_auto/1ff751_2602975707fe48abb5a928f8e964628e~mv2.jpeg"
+               alt="A freshly cut, pristine green lawn — GLC's signature work." loading="eager" />
+        </div>
+        <div class="hidden md:block absolute -bottom-8 -left-8 bg-sand-50 border border-forest-100 shadow-card rounded-md px-6 py-5 max-w-[260px]">
+          <p class="serif italic text-forest-800 text-lg leading-snug">"A friendly neighbor on your block who does good work."</p>
+          <p class="mt-2 text-xs tracking-[0.18em] uppercase text-slate2-600">— The GLC promise</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE MAN BEHIND THE MOWER ============ -->
+<section id="story" class="relative bg-sand-50 py-28 md:py-36" aria-label="The man behind the mower">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-14">
+
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+
+      <div class="lg:col-span-5 reveal">
+        <div class="relative">
+          <span class="numeral absolute -top-14 -left-4 text-[10rem] md:text-[13rem] select-none" aria-hidden="true">01</span>
+          <div class="frame aspect-[4/5] relative z-10">
+            <img src="https://static.wixstatic.com/media/1ff751_a665874d5f694927a6cc5c0a15f62598~mv2.jpeg/v1/fill/w_1100,h_1380,al_c,q_85,enc_auto/1ff751_a665874d5f694927a6cc5c0a15f62598~mv2.jpeg"
+                 alt="Portrait of Matt Robbins, founder of GLC Great Lawn Cuts" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 reveal">
+        <p class="eyebrow mb-5"><span class="rule"></span>The man behind the mower</p>
+        <h2 class="display text-[2.4rem] sm:text-[3rem] md:text-[3.6rem] text-forest-900">
+          My name is <em class="italic font-normal text-forest-700">Matt Robbins.</em>
+        </h2>
+
+        <div class="mt-8 space-y-6 text-[1.02rem] md:text-[1.08rem] leading-[1.8] text-slate2-700 max-w-2xl">
+          <p>
+            I'm a college student at the University of Alabama studying accounting. My goal in life is to be an entrepreneur, so I tend to spend a lot of time learning how businesses are supposed to work, how to price things, and how to treat customers. But there's a gap between reading about it and actually doing it. This is how I close that gap.
+          </p>
+          <p>
+            Every time I mow a lawn, I'm practicing something: how to be reliable, how to communicate clearly, how to price fairly, and how to handle it when something doesn't go right. The feedback I get from customers — especially the critical stuff — is genuinely valuable to me because it's real.
+          </p>
+          <p>
+            I think there's a real need in this neighborhood for lawn care that's affordable and doesn't come with a runaround. I'm not trying to be a big company. I'm trying to be a friendly neighbor on your block who does good work and is easy to deal with.
+          </p>
+        </div>
+
+        <div class="mt-12 grid sm:grid-cols-3 gap-6">
+          <div class="rounded-md border border-forest-100 bg-white/70 backdrop-blur px-5 py-5 shadow-soft">
+            <p class="text-[0.68rem] tracking-[0.2em] uppercase text-forest-700">Studying</p>
+            <p class="serif text-xl text-forest-900 mt-1.5">Accounting</p>
+            <p class="text-sm text-slate2-600 mt-1">University of Alabama</p>
+          </div>
+          <div class="rounded-md border border-forest-100 bg-white/70 backdrop-blur px-5 py-5 shadow-soft">
+            <p class="text-[0.68rem] tracking-[0.2em] uppercase text-forest-700">Operating</p>
+            <p class="serif text-xl text-forest-900 mt-1.5">Solo</p>
+            <p class="text-sm text-slate2-600 mt-1">One person, end to end</p>
+          </div>
+          <div class="rounded-md border border-forest-100 bg-white/70 backdrop-blur px-5 py-5 shadow-soft">
+            <p class="text-[0.68rem] tracking-[0.2em] uppercase text-forest-700">Driven by</p>
+            <p class="serif text-xl text-forest-900 mt-1.5">Feedback</p>
+            <p class="text-sm text-slate2-600 mt-1">Especially the critical kind</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRANSPARENCY PHILOSOPHY ============ -->
+<section id="philosophy" class="relative bg-forest-800 text-sand-50 py-28 md:py-36 overflow-hidden" aria-label="The transparency philosophy">
+  <div class="absolute inset-0 grain pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute -top-40 -right-40 h-[600px] w-[600px] rounded-full bg-forest-700/60 blur-3xl" aria-hidden="true"></div>
+
+  <div class="relative max-w-5xl mx-auto px-6 md:px-10 lg:px-14 text-center">
+    <p class="eyebrow mb-6 text-sand-300"><span class="rule"></span>A different kind of business</p>
+    <h2 class="display text-[2.4rem] sm:text-[3.2rem] md:text-[4rem] text-sand-50">
+      The Transparency<br/><em class="italic font-normal text-sand-200">Philosophy.</em>
+    </h2>
+
+    <p class="mt-10 mx-auto max-w-3xl text-[1.05rem] md:text-[1.15rem] leading-[1.85] text-sand-100/90">
+      GLC is not a booking website; it is a transparency portal. This business is my first real-world test of entrepreneurship. I believe that honest communication is the foundation of any successful relationship. That's why I share my journey, my pricing, and my goals here. I want you to know who I am and what I intend to do before we start. If you give a young entrepreneur a chance, I promise you won't be disappointed.
+    </p>
+
+    <div class="mt-14 grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+      <div class="text-left border-t border-sand-50/15 pt-5">
+        <p class="text-[0.68rem] tracking-[0.22em] uppercase text-sand-300">Principle 01</p>
+        <p class="serif text-2xl mt-2">Honesty first</p>
+      </div>
+      <div class="text-left border-t border-sand-50/15 pt-5">
+        <p class="text-[0.68rem] tracking-[0.22em] uppercase text-sand-300">Principle 02</p>
+        <p class="serif text-2xl mt-2">Clear pricing</p>
+      </div>
+      <div class="text-left border-t border-sand-50/15 pt-5">
+        <p class="text-[0.68rem] tracking-[0.22em] uppercase text-sand-300">Principle 03</p>
+        <p class="serif text-2xl mt-2">Show the work</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / FOOTER ============ -->
+<section id="contact" class="relative bg-sand-50 py-24 md:py-32" aria-label="Get in touch">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 lg:px-14">
+    <div class="grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7">
+        <p class="eyebrow mb-5"><span class="rule"></span>Start the conversation</p>
+        <h3 class="display text-[2.2rem] sm:text-[2.8rem] md:text-[3.4rem] text-forest-900">
+          Give a young entrepreneur<br/><em class="italic font-normal text-forest-700">a chance.</em>
+        </h3>
+        <p class="mt-6 text-slate2-700 leading-[1.8] max-w-xl">
+          Text or call — that's it. No forms, no portals, no runaround. I'll get back to you the same day with honest answers about timing and pricing.
+        </p>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="rounded-md bg-white border border-forest-100 shadow-card p-8 md:p-9">
+          <p class="text-[0.7rem] tracking-[0.22em] uppercase text-forest-700">Matt Robbins · Owner</p>
+          <a href="tel:720-434-0934" class="serif block text-3xl md:text-4xl text-forest-900 mt-3 hover:text-forest-700 transition-colors" data-testid="contact-phone">(720) 434-0934</a>
+          <a href="mailto:matthew39580@gmail.com" class="block mt-3 text-slate2-700 hover:text-forest-800 transition-colors" data-testid="contact-email">matthew39580@gmail.com</a>
+          <div class="mt-7 pt-6 border-t border-forest-100">
+            <a href="tel:720-434-0934" class="btn-primary w-full justify-center" data-testid="contact-cta">
+              Text or call me
+              <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-forest-900 text-sand-100/85 py-12">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-sand-50/10 serif text-lg text-sand-50">G</span>
+      <div class="leading-tight">
+        <p class="serif text-lg text-sand-50">GLC Great Lawn Cuts</p>
+        <p class="text-xs tracking-[0.22em] uppercase text-sand-100/60">Central Park · Commerce City</p>
+      </div>
+    </div>
+    <p class="text-sm text-sand-100/70">© 2026 GLC Lawn Care. All rights reserved.</p>
+    <div class="flex items-center gap-6">
+      <a href="tel:720-434-0934" class="footer-link text-sm" data-testid="footer-phone">(720) 434-0934</a>
+      <a href="mailto:matthew39580@gmail.com" class="footer-link text-sm" data-testid="footer-email">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+</script>
+</body>
+</html>
