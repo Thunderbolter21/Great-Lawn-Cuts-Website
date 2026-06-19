@@ -1,27 +1,14 @@
 import { useEffect } from "react";
 import { ArrowRight } from "lucide-react";
+import { SiteHeader, SiteFooter, Eyebrow } from "./SiteShell";
 
 const PORTRAIT_IMG =
   "https://static.wixstatic.com/media/1ff751_2602975707fe48abb5a928f8e964628e~mv2.jpeg/v1/fill/w_1100,h_1400,al_c,q_85,enc_auto/1ff751_2602975707fe48abb5a928f8e964628e~mv2.jpeg";
 const LAWN_IMG =
   "https://static.wixstatic.com/media/1ff751_a665874d5f694927a6cc5c0a15f62598~mv2.jpeg/v1/fill/w_1100,h_1380,al_c,q_85,enc_auto/1ff751_a665874d5f694927a6cc5c0a15f62598~mv2.jpeg";
-const LOGO_IMG =
-  "https://customer-assets.emergentagent.com/job_glc-premium-redesign/artifacts/fmsli88s_High-quality%20updated%20logo.png";
 
-const Eyebrow = ({ children, light = false }) => (
-  <p
-    className={`text-[0.7rem] font-semibold uppercase tracking-[0.22em] ${
-      light ? "text-[#d6bf8e]" : "text-[#b08850]"
-    }`}
-  >
-    <span
-      className={`inline-block w-[42px] h-px align-middle mr-3 opacity-60 ${
-        light ? "bg-[#d6bf8e]" : "bg-[#b08850]"
-      }`}
-    />
-    {children}
-  </p>
-);
+const Eyebrow_unused_legacy = null;
+// Eyebrow component now imported from SiteShell
 
 export default function GLCSite() {
   // Reveal on scroll
@@ -43,30 +30,7 @@ export default function GLCSite() {
 
   return (
     <div className="glc-root font-sans antialiased text-[#1d2124] bg-[#faf7f1]" data-testid="glc-root">
-      {/* NAV */}
-      <header className="absolute top-0 left-0 right-0 z-40">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-14 py-7 flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-3 group" data-testid="nav-logo">
-            <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white border border-[#dde8de] overflow-hidden shadow-sm">
-              <img src={LOGO_IMG} alt="GLC Great Lawn Cuts logo" className="h-10 w-10 object-contain" />
-            </span>
-            <span className="flex flex-col leading-tight">
-              <span className="glc-serif text-xl text-[#1c3320]">GLC</span>
-              <span className="text-[0.65rem] tracking-[0.25em] uppercase text-[#3a4044]">
-                Great Lawn Cuts
-              </span>
-            </span>
-          </a>
-          <nav className="hidden md:flex items-center gap-10" aria-label="Primary">
-            <a href="#story" className="glc-nav-link" data-testid="nav-story">The Story</a>
-            <a href="#philosophy" className="glc-nav-link" data-testid="nav-philosophy">Philosophy</a>
-            <a href="#contact" className="glc-nav-link" data-testid="nav-contact">Contact</a>
-          </nav>
-          <a href="tel:720-434-0934" className="hidden md:inline-flex glc-btn-ghost" data-testid="nav-cta">
-            (720) 434-0934
-          </a>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* HERO */}
       <section id="top" className="relative overflow-hidden glc-grain" aria-label="Hero">
@@ -315,33 +279,7 @@ export default function GLCSite() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-[#13231a] text-[#f3ecdc]/85 py-12">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/95 overflow-hidden">
-              <img src={LOGO_IMG} alt="GLC Great Lawn Cuts logo" className="h-9 w-9 object-contain" />
-            </span>
-            <div className="leading-tight">
-              <p className="glc-serif text-lg text-[#faf7f1]">GLC Great Lawn Cuts</p>
-              <p className="text-xs tracking-[0.22em] uppercase text-[#f3ecdc]/60">
-                Central Park · Commerce City
-              </p>
-            </div>
-          </div>
-          <p className="text-sm text-[#f3ecdc]/70" data-testid="footer-copyright">
-            © 2026 GLC Lawn Care. All rights reserved.
-          </p>
-          <div className="flex items-center gap-6">
-            <a href="tel:720-434-0934" className="glc-footer-link text-sm" data-testid="footer-phone">
-              (720) 434-0934
-            </a>
-            <a href="mailto:glcgreatlawncuts@gmail.com" className="glc-footer-link text-sm" data-testid="footer-email">
-              Email
-            </a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

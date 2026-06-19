@@ -159,3 +159,9 @@
   outline-offset: 3px;
   border-radius: 4px;
 }
+
+/* Lightbox fade-in */
+@keyframes glcFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
