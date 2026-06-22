@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1c3320" />
+    <title>GLC · Great Lawn Cuts — Affordable, Reliable Lawn Care in Central Park, Commerce City</title>
+    <meta
+      name="description"
+      content="GLC Great Lawn Cuts is a one-person, local lawn mowing operation in Central Park, Commerce City, CO. Affordable, reliable, honest lawn care. Text or call Matt at (720) 434-0934."
+    />
+
+    <!-- Tailwind CSS via CDN (arbitrary values supported) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom palette, fonts, and components -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="glc-root font-sans antialiased text-[#1d2124] bg-[#faf7f1]">
+    <!-- ============================ HEADER ============================ -->
+    <header class="absolute top-0 left-0 right-0 z-40">
+      <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-14 py-7 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group" aria-label="GLC Great Lawn Cuts — home">
+          <span class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white border border-[#dde8de] overflow-hidden shadow-sm">
+            <img src="images/logo.png" alt="GLC Great Lawn Cuts logo" class="h-10 w-10 object-contain" />
+          </span>
+          <span class="flex flex-col leading-tight">
+            <span class="glc-serif text-xl text-[#1c3320]">GLC</span>
+            <span class="text-[0.65rem] tracking-[0.25em] uppercase text-[#3a4044]">Great Lawn Cuts</span>
+          </span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-10" aria-label="Primary">
+          <a href="index.html" class="glc-nav-link text-[#13231a] font-semibold">Home</a>
+          <a href="services.html" class="glc-nav-link">Services</a>
+          <a href="work.html" class="glc-nav-link">My Work</a>
+          <a href="#contact" class="glc-nav-link">Contact</a>
+        </nav>
+
+        <a href="tel:720-434-0934" class="hidden md:inline-flex glc-btn-ghost">(720) 434-0934</a>
+
+        <!-- Mobile menu toggle -->
+        <button
+          type="button"
+          id="menu-toggle"
+          class="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/80 border border-[#dde8de] text-[#13231a]"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <svg class="icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg class="icon-close hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <!-- Mobile nav panel -->
+      <nav
+        id="mobile-nav"
+        class="md:hidden hidden mx-6 mb-2 rounded-md bg-white border border-[#dde8de] glc-shadow-card overflow-hidden"
+        aria-label="Mobile"
+      >
+        <a href="index.html" class="block px-6 py-4 border-b border-[#eee6d6] glc-nav-link text-[#13231a] font-semibold">Home</a>
+        <a href="services.html" class="block px-6 py-4 border-b border-[#eee6d6] glc-nav-link">Services</a>
+        <a href="work.html" class="block px-6 py-4 border-b border-[#eee6d6] glc-nav-link">My Work</a>
+        <a href="#contact" class="block px-6 py-4 border-b border-[#eee6d6] glc-nav-link">Contact</a>
+        <a href="tel:720-434-0934" class="block px-6 py-4 text-[#244229] font-semibold">Text or call: (720) 434-0934</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============================ HERO ============================ -->
+      <section id="top" class="relative overflow-hidden glc-grain" aria-label="Hero">
+        <div class="absolute inset-0 -z-10" aria-hidden="true">
+          <div class="absolute inset-0 bg-gradient-to-b from-[#faf7f1] via-[#faf7f1] to-[#f3ecdc]"></div>
+          <div class="absolute -top-32 -right-32 h-[520px] w-[520px] rounded-full bg-[#dde8de]/60 blur-3xl"></div>
+          <div class="absolute top-1/3 -left-24 h-[380px] w-[380px] rounded-full bg-[#e6d8b9]/70 blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-14 pt-40 md:pt-44 pb-24 md:pb-32 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          <div class="lg:col-span-7 glc-reveal">
+            <p class="glc-eyebrow"><span class="glc-eyebrow-rule"></span>Central Park · Commerce City</p>
+            <h1 class="glc-display mt-6 text-[2.6rem] sm:text-[3.4rem] md:text-[4.2rem] lg:text-[5rem] text-[#13231a]">
+              I mow lawns, <em class="italic font-normal text-[#244229]">reliably,</em><br />
+              affordably, stress-free.
+            </h1>
+            <p class="mt-8 max-w-xl text-[1.05rem] md:text-[1.12rem] leading-[1.75] text-[#2b3033]">
+              GLC is a one-person lawn mowing operation run out of Central Park, Commerce City. I started it because I
+              wanted to learn what it actually takes to run a business — and because I think this neighborhood deserves
+              someone local, affordable, and honest. My goal is simple: affordable and reliable lawn care, friendly and
+              responsive customer service, and constant improvement through genuine customer feedback.
+            </p>
+            <div class="mt-10 flex flex-wrap items-center gap-6">
+              <a href="tel:720-434-0934" class="glc-btn-primary" aria-label="Text or call Matt at (720) 434-0934">
+                Text or call me: (720) 434-0934
+                <svg class="glc-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="#story" class="glc-btn-ghost">Read my story</a>
+            </div>
+
+            <dl class="mt-14 grid grid-cols-3 gap-6 max-w-lg">
+              <div>
+                <dt class="text-[0.7rem] tracking-[0.18em] uppercase text-[#3a4044]">Local</dt>
+                <dd class="glc-serif text-2xl md:text-3xl text-[#1c3320] mt-1">Commerce City</dd>
+              </div>
+              <div>
+                <dt class="text-[0.7rem] tracking-[0.18em] uppercase text-[#3a4044]">Honest</dt>
+                <dd class="glc-serif text-2xl md:text-3xl text-[#1c3320] mt-1">Fair pricing</dd>
+              </div>
+              <div>
+                <dt class="text-[0.7rem] tracking-[0.18em] uppercase text-[#3a4044]">Reliable</dt>
+                <dd class="glc-serif text-2xl md:text-3xl text-[#1c3320] mt-1">On schedule</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="lg:col-span-5 glc-reveal">
+            <div class="relative">
+              <div class="glc-frame aspect-[4/5]">
+                <img src="images/lawn.jpeg" alt="A freshly cut, pristine green lawn — GLC's signature work." />
+              </div>
+              <div class="hidden md:block absolute -bottom-8 -left-8 bg-[#faf7f1] border border-[#dde8de] glc-shadow-card rounded-md px-6 py-5 max-w-[260px]">
+                <p class="glc-serif italic text-[#1c3320] text-lg leading-snug">
+                  &ldquo;A friendly neighbor on your block who does good work.&rdquo;
+                </p>
+                <p class="mt-2 text-xs tracking-[0.18em] uppercase text-[#3a4044]">— The GLC promise</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ STORY ============================ -->
+      <section id="story" class="relative bg-[#faf7f1] py-28 md:py-36" aria-label="The man behind the mower">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-14">
+          <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+            <div class="lg:col-span-5 glc-reveal">
+              <div class="relative">
+                <span class="glc-numeral absolute -top-14 -left-4 text-[10rem] md:text-[13rem] select-none" aria-hidden="true">01</span>
+                <div class="glc-frame aspect-[4/5] relative z-10">
+                  <img src="images/portrait.jpeg" alt="Portrait of Matt Robbins, founder of GLC Great Lawn Cuts" loading="lazy" />
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-7 glc-reveal">
+              <p class="glc-eyebrow"><span class="glc-eyebrow-rule"></span>The man behind the mower</p>
+              <h2 class="glc-display mt-5 text-[2.4rem] sm:text-[3rem] md:text-[3.6rem] text-[#13231a]">
+                My name is <em class="italic font-normal text-[#244229]">Matt Robbins.</em>
+              </h2>
+
+              <div class="mt-8 space-y-6 text-[1.02rem] md:text-[1.08rem] leading-[1.8] text-[#2b3033] max-w-2xl">
+                <p>I'm a college student at the University of Alabama studying accounting. My goal in life is to be an entrepreneur, so I tend to spend a lot of time learning how businesses are supposed to work, how to price things, and how to treat customers. But there's a gap between reading about it and actually doing it. This is how I close that gap.</p>
+                <p>Every time I mow a lawn, I'm practicing something: how to be reliable, how to communicate clearly, how to price fairly, and how to handle it when something doesn't go right. The feedback I get from customers — especially the critical stuff — is genuinely valuable to me because it's real.</p>
+                <p>I think there's a real need in this neighborhood for lawn care that's affordable and doesn't come with a runaround. I'm not trying to be a big company. I'm trying to be a friendly neighbor on your block who does good work and is easy to deal with.</p>
+              </div>
+
+              <div class="mt-12 grid sm:grid-cols-3 gap-6">
+                <div class="rounded-md border border-[#dde8de] bg-white/70 backdrop-blur px-5 py-5 glc-shadow-soft">
+                  <p class="text-[0.68rem] tracking-[0.2em] uppercase text-[#244229]">Studying</p>
+                  <p class="glc-serif text-xl text-[#13231a] mt-1.5">Accounting</p>
+                  <p class="text-sm text-[#3a4044] mt-1">University of Alabama</p>
+                </div>
+                <div class="rounded-md border border-[#dde8de] bg-white/70 backdrop-blur px-5 py-5 glc-shadow-soft">
+                  <p class="text-[0.68rem] tracking-[0.2em] uppercase text-[#244229]">Operating</p>
+                  <p class="glc-serif text-xl text-[#13231a] mt-1.5">Solo</p>
+                  <p class="text-sm text-[#3a4044] mt-1">One person, end to end</p>
+                </div>
+                <div class="rounded-md border border-[#dde8de] bg-white/70 backdrop-blur px-5 py-5 glc-shadow-soft">
+                  <p class="text-[0.68rem] tracking-[0.2em] uppercase text-[#244229]">Driven by</p>
+                  <p class="glc-serif text-xl text-[#13231a] mt-1.5">Feedback</p>
+                  <p class="text-sm text-[#3a4044] mt-1">Especially the critical kind</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= PHILOSOPHY ========================= -->
+      <section id="philosophy" class="relative bg-[#1c3320] text-[#faf7f1] py-28 md:py-36 overflow-hidden" aria-label="The transparency philosophy">
+        <div class="absolute inset-0 glc-grain pointer-events-none" aria-hidden="true"></div>
+        <div class="absolute -top-40 -right-40 h-[600px] w-[600px] rounded-full bg-[#244229]/60 blur-3xl" aria-hidden="true"></div>
+
+        <div class="relative max-w-5xl mx-auto px-6 md:px-10 lg:px-14 text-center">
+          <p class="glc-eyebrow glc-eyebrow--light justify-center"><span class="glc-eyebrow-rule"></span>A different kind of business</p>
+          <h2 class="glc-display mt-6 text-[2.4rem] sm:text-[3.2rem] md:text-[4rem] text-[#faf7f1]">
+            The Transparency<br /><em class="italic font-normal text-[#e6d8b9]">Philosophy.</em>
+          </h2>
+
+          <p class="mt-10 mx-auto max-w-3xl text-[1.05rem] md:text-[1.15rem] leading-[1.85] text-[#f3ecdc]/90">
+            GLC is not a booking website; it is a transparency portal. This business is my first real-world test of
+            entrepreneurship. I believe that honest communication is the foundation of any successful relationship.
+            That's why I share my journey, my pricing, and my goals here. I want you to know who I am and what I intend
+            to do before we start. If you give a young entrepreneur a chance, I promise you won't be disappointed.
+          </p>
+
+          <div class="mt-14 grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            <div class="text-left border-t border-[#faf7f1]/15 pt-5">
+              <p class="text-[0.68rem] tracking-[0.22em] uppercase text-[#d6bf8e]">Principle 01</p>
+              <p class="glc-serif text-2xl mt-2">Honesty first</p>
+            </div>
+            <div class="text-left border-t border-[#faf7f1]/15 pt-5">
+              <p class="text-[0.68rem] tracking-[0.22em] uppercase text-[#d6bf8e]">Principle 02</p>
+              <p class="glc-serif text-2xl mt-2">Clear pricing</p>
+            </div>
+            <div class="text-left border-t border-[#faf7f1]/15 pt-5">
+              <p class="text-[0.68rem] tracking-[0.22em] uppercase text-[#d6bf8e]">Principle 03</p>
+              <p class="glc-serif text-2xl mt-2">Show the work</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ CONTACT ============================ -->
+      <section id="contact" class="relative bg-[#faf7f1] py-24 md:py-32" aria-label="Get in touch">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-14">
+          <div class="max-w-3xl">
+            <p class="glc-eyebrow"><span class="glc-eyebrow-rule"></span>Start the conversation</p>
+            <h2 class="glc-display mt-5 text-[2.2rem] sm:text-[2.8rem] md:text-[3.4rem] text-[#13231a]">
+              Give a young entrepreneur<br /><em class="italic font-normal text-[#244229]">a chance.</em>
+            </h2>
+            <p class="mt-6 text-[#2b3033] leading-[1.8] max-w-xl">
+              Text or call — that's it. No forms, no portals, no runaround. I'll get back to you the same day with
+              honest answers about timing and pricing.
+            </p>
+          </div>
+
+          <div class="mt-14 grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+            <!-- Service-area map -->
+            <div class="lg:col-span-7 glc-reveal">
+              <div class="relative h-full min-h-[360px] md:min-h-[440px] rounded-md overflow-hidden border border-[#dde8de] glc-shadow-card">
+                <iframe
+                  title="GLC service area — Central Park, Commerce City, Colorado"
+                  src="https://www.google.com/maps?q=Central+Park,+Commerce+City,+CO&t=&z=13&ie=UTF8&iwloc=B&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="absolute inset-0 w-full h-full"
+                  style="border: 0; filter: saturate(0.85) contrast(1.02);"
+                ></iframe>
+                <div class="pointer-events-none absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
+                  <div class="pointer-events-auto bg-[#faf7f1]/95 backdrop-blur border border-[#dde8de] rounded-md px-4 py-3 glc-shadow-soft">
+                    <p class="text-[0.65rem] tracking-[0.22em] uppercase text-[#244229]">Service area</p>
+                    <p class="glc-serif text-lg text-[#13231a] leading-tight mt-0.5">Central Park · Commerce City, CO</p>
+                  </div>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Central+Park%2C+Commerce+City%2C+CO"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pointer-events-auto inline-flex items-center gap-2 bg-[#244229] text-[#faf7f1] text-xs font-semibold tracking-wide px-4 py-2.5 rounded-full hover:bg-[#13231a] transition-colors"
+                  >
+                    Open in Maps
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact card -->
+            <div class="lg:col-span-5 glc-reveal">
+              <div class="rounded-md bg-white border border-[#dde8de] glc-shadow-card p-8 md:p-9 h-full flex flex-col">
+                <p class="text-[0.7rem] tracking-[0.22em] uppercase text-[#244229]">Matt Robbins · Owner</p>
+                <a href="tel:720-434-0934" class="glc-serif block text-3xl md:text-4xl text-[#13231a] mt-3 hover:text-[#244229] transition-colors">(720) 434-0934</a>
+                <a href="mailto:glcgreatlawncuts@gmail.com" class="block mt-3 text-[#2b3033] hover:text-[#1c3320] transition-colors break-all">glcgreatlawncuts@gmail.com</a>
+
+                <dl class="mt-6 pt-6 border-t border-[#dde8de] grid grid-cols-2 gap-4">
+                  <div>
+                    <dt class="text-[0.62rem] tracking-[0.22em] uppercase text-[#3a4044]">Response</dt>
+                    <dd class="glc-serif text-lg text-[#13231a] mt-1">Same day</dd>
+                  </div>
+                  <div>
+                    <dt class="text-[0.62rem] tracking-[0.22em] uppercase text-[#3a4044]">Service area</dt>
+                    <dd class="glc-serif text-lg text-[#13231a] mt-1">Central Park</dd>
+                  </div>
+                </dl>
+
+                <div class="mt-auto pt-7">
+                  <a href="tel:720-434-0934" class="glc-btn-primary w-full justify-center">
+                    Text or call me
+                    <svg class="glc-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="bg-[#13231a] text-[#f3ecdc]/85 py-12">
+      <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-14 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/95 overflow-hidden">
+            <img src="images/logo.png" alt="GLC Great Lawn Cuts logo" class="h-9 w-9 object-contain" />
+          </span>
+          <div class="leading-tight">
+            <p class="glc-serif text-lg text-[#faf7f1]">GLC Great Lawn Cuts</p>
+            <p class="text-xs tracking-[0.22em] uppercase text-[#f3ecdc]/60">Central Park · Commerce City</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-6 text-sm">
+          <a href="index.html" class="glc-footer-link">Home</a>
+          <a href="services.html" class="glc-footer-link">Services</a>
+          <a href="work.html" class="glc-footer-link">My Work</a>
+        </div>
+        <p class="text-sm text-[#f3ecdc]/70">© 2026 GLC Lawn Care. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="tel:720-434-0934" class="glc-footer-link text-sm">(720) 434-0934</a>
+          <a href="mailto:glcgreatlawncuts@gmail.com" class="glc-footer-link text-sm">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

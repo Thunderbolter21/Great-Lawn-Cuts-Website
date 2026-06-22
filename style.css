@@ -1,0 +1,245 @@
+/* ====================================================================
+   GLC Great Lawn Cuts — Premium Styling (self-contained static site)
+   Cormorant Garamond (serif/display) + Manrope (body)
+   Tailwind utilities handle layout; this file owns the palette,
+   typography, and bespoke components Tailwind doesn't cover.
+   ==================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap");
+
+/* ---- Color palette (muted / earthy, upper-middle-class feel) ---- */
+:root {
+  --glc-cream: #faf7f1;
+  --glc-sand: #f3ecdc;
+  --glc-mist: #dde8de;
+  --glc-forest-900: #13231a;
+  --glc-forest-800: #1c3320;
+  --glc-forest-600: #244229;
+  --glc-gold: #b08850;
+  --glc-gold-light: #d6bf8e;
+  --glc-wheat: #e6d8b9;
+  --glc-ink: #1d2124;
+  --glc-ink-soft: #2b3033;
+  --glc-ink-mute: #3a4044;
+}
+
+/* ---- Base ---- */
+html {
+  scroll-behavior: smooth;
+}
+.glc-root {
+  font-family: "Manrope", system-ui, -apple-system, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Typography helpers ---- */
+.glc-serif {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -0.01em;
+}
+.glc-display {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  font-weight: 500;
+}
+
+/* ---- Decorative numeral ---- */
+.glc-numeral {
+  font-family: "Cormorant Garamond", serif;
+  color: rgba(36, 66, 41, 0.14);
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* ---- Eyebrow label (was a React component) ---- */
+.glc-eyebrow {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--glc-gold);
+}
+.glc-eyebrow--light {
+  color: var(--glc-gold-light);
+}
+.glc-eyebrow-rule {
+  display: inline-block;
+  width: 42px;
+  height: 1px;
+  margin-right: 0.75rem;
+  opacity: 0.6;
+  background: currentColor;
+}
+
+/* ---- Subtle paper grain (inside relative containers) ---- */
+.glc-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>");
+}
+
+/* ---- Shadows ---- */
+.glc-shadow-soft {
+  box-shadow: 0 10px 40px -12px rgba(20, 35, 25, 0.18);
+}
+.glc-shadow-card {
+  box-shadow: 0 24px 60px -28px rgba(20, 35, 25, 0.35);
+}
+
+/* ---- Image frame ---- */
+.glc-frame {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow:
+    0 30px 80px -32px rgba(19, 35, 26, 0.45),
+    0 8px 24px -16px rgba(19, 35, 26, 0.3);
+}
+.glc-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.glc-frame:hover img {
+  transform: scale(1.03);
+}
+
+/* ---- Buttons ---- */
+.glc-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--glc-forest-600);
+  color: var(--glc-cream);
+  padding: 1rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  box-shadow: 0 14px 32px -16px rgba(19, 35, 26, 0.55);
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color 0.25s ease,
+    box-shadow 0.35s ease;
+  will-change: transform;
+}
+.glc-btn-primary:hover {
+  background: var(--glc-forest-900);
+  transform: translateY(-2px);
+  box-shadow: 0 22px 48px -18px rgba(19, 35, 26, 0.6);
+}
+.glc-btn-primary .glc-arrow {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.glc-btn-primary:hover .glc-arrow {
+  transform: translateX(4px);
+}
+
+.glc-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--glc-forest-900);
+  font-weight: 600;
+  font-size: 0.92rem;
+  border-bottom: 1px solid rgba(36, 66, 41, 0.35);
+  padding-bottom: 2px;
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+.glc-btn-ghost:hover {
+  border-color: var(--glc-forest-900);
+  color: #000;
+}
+
+/* ---- Nav links ---- */
+.glc-nav-link {
+  color: #4a5258;
+  font-weight: 500;
+  font-size: 0.92rem;
+  transition: color 0.2s ease;
+}
+.glc-nav-link:hover {
+  color: var(--glc-forest-900);
+}
+
+/* ---- Footer links ---- */
+.glc-footer-link {
+  color: rgba(250, 247, 241, 0.78);
+  transition: color 0.2s ease;
+}
+.glc-footer-link:hover {
+  color: #fff;
+}
+
+/* ---- Reveal-on-scroll (progressive enhancement via script.js) ---- */
+.glc-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.glc-reveal.glc-visible {
+  opacity: 1;
+  transform: none;
+}
+/* If JS is unavailable, never leave content hidden */
+.no-js .glc-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---- Focus visibility ---- */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--glc-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- Lightbox (work gallery) ---- */
+@keyframes glcFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.glc-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+  background: rgba(10, 18, 12, 0.92);
+  backdrop-filter: blur(12px);
+  animation: glcFade 0.25s ease-out;
+}
+.glc-lightbox[hidden] {
+  display: none;
+}
+.glc-lightbox img {
+  max-height: 88vh;
+  max-width: 92vw;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* ---- Reduced motion: respect user preference ---- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .glc-reveal { opacity: 1; transform: none; transition: none; }
+  .glc-frame img { transition: none; }
+}
